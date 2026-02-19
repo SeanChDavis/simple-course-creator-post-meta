@@ -49,11 +49,12 @@ class SCC_Post_Meta_Hook {
 		$written_by = apply_filters( 'written_by', __( 'written by', 'scc_post_meta' ) );
 		$written_on = apply_filters( 'written_on', __( 'on', 'scc_post_meta' ) );
 
-		// grab the author of the post
-		$author_name = get_post_field( 'post_author', $post_id );
+		// set conditions
+		$show_author = ! isset( $options['display_author'] ) || '0' == $options['display_author'];
+		$show_date = ! isset( $options['display_date'] ) || '0' == $options['display_date'];
 
 		// show post meta data based on settings
-		if ( ( ! isset( $options['display_author'] ) || '0' == $options['display_author'] ) || ( ! isset( $options['display_date'] ) || '0' == $options['display_date'] ) ) {
+		if ( $show_author || $show_date ) {
 			$pm_open = '<p class="scc-post-meta">';
 			$pm_close = '</p>';
 		} else {
@@ -61,14 +62,15 @@ class SCC_Post_Meta_Hook {
 			$pm_close = '';
 		}
 		echo $pm_open;
-		if ( ! isset( $options['display_author'] ) || '0' == $options['display_author'] ) {
-			echo '<span class="sccpm-author">' . $written_by . '</span> ' . get_the_author_meta( 'display_name', $author_name );
+		if ( $show_author ) {
+			echo '<span class="sccpm-author">' . $written_by . '</span> ' . get_the_author_meta( 'display_name', get_post_field( 'post_author', $post_id ) );
 		}
-		if ( ! isset( $options['display_date'] ) || '0' == $options['display_date'] ) {
-			if ( ! isset( $options['display_author'] ) || '0' == $options['display_author'] ) {
+		if ( $show_date ) {
+			// Only show 'written on' text for date if the author is also shown
+			if ( $show_author ) {
 				echo ' <span class="sccpm-date">' . $written_on . '</span> ';
 			}
-			echo get_the_time( 'F j, Y', $post_id );
+			echo get_the_date( '', $post_id );
 		}
 		echo $pm_close;
 	}
