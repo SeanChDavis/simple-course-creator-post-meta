@@ -1,9 +1,7 @@
 Simple Course Creator Post Meta
 =====================
 
-View it on WordPress: (http://wordpress.org/plugins/simple-course-creator-post-meta/)
-
-This is an add-on plugin for use with the [Simple Course Creator](https://github.com/sdavismedia/simple-course-creator
+This is an add-on plugin for use with the [Simple Course Creator](https://github.com/seanchdavis/simple-course-creator
 ) plugin.
 
 Simple Course Creator is designed to easily link posts together in a series and output that series list in the content of each included post.
@@ -20,7 +18,7 @@ Once activated, the post authors and dates published will appear beneath the pos
 
 Once activated, new options will be added to the SCC settings page under the display tab. You can hide the author, date, or both.
 
-New customizer options will also be available. If you have [Simple Course Creator Customizer](https://github.com/sdavismedia/simple-course-creator-customizer/) installed, your new settings will be merged. Otherwise, they will
+New customizer options will also be available. If you have [Simple Course Creator Customizer](https://github.com/seanchdavis/simple-course-creator-customizer/) installed, your new settings will be merged. Otherwise, they will
  appear on their own.
 
 ### Theme Overrides
@@ -57,11 +55,3 @@ If you notice any mistakes, feel free to fork the repo and submit a pull request
 ---
 
 This plugin, like WordPress, is licensed under the GPL. Do what you want with it. I seriously don't care. 
-
-### Developer
----
-
-I'm Sean. I've created a few little pieces of software. I'm not that easy to find online. That's by design.
-
-Is this plugin useful to you? If so, please consider buying me a bag of coffee beans. Thank you much. [Donate via
- PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=52HQDSEUA542S)

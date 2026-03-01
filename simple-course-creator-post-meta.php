@@ -1,14 +1,14 @@
 <?php
 /**
  * Plugin Name: Simple Course Creator - Post Meta
- * Plugin URI: https://github.com/SDavisMedia/simple-course-creator-post-meta
+ * Plugin URI: https://github.com/seanchdavis/simple-course-creator-post-meta
  * Description: Add post meta information to each post in the output listing
  * Version: 1.0.8
  * Author: Sean Davis
- * Author URI: https://github.com/SDavisMedia/
+ * Author URI: https://github.com/seanchdavis/
  * License: GPL2
  * Requires at least: 3.8
- * Tested up to: 5.3
+ * Tested up to: 6.9.1
  * Text Domain: scc_post_meta
  * Domain Path: /languages/
  *

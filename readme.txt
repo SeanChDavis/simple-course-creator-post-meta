@@ -1,9 +1,8 @@
 === Simple Course Creator Post Meta ===
 Contributors: sdavis2702
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=52HQDSEUA542S
 Tags: customizer, series, course, lesson, taxonomy, sdavis2702
 Requires at least: 3.8
-Tested up to: 5.3
+Tested up to: 6.9.1
 Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,14 +11,10 @@ Add post meta information for Simple Course Creator output.
 
 == Description ==
 
-This plugin must be used with [Simple Course Creator](http://wordpress.org/plugins/simple-course-creator/).
+This plugin must be used with [Simple Course Creator](https://github.com/seanchdavis/simple-course-creator/).
 
 Add post meta information to the post list output from Simple Course Creator. Below each post in a course, the author
 and published date is displayed.
-
-Follow Simple Course Creator Post Meta development on [GitHub](https://github.com/sdavismedia/simple-course-creator-post-meta).
-
-View all [contributors](https://github.com/sdavismedia/simple-course-creator-post-meta/graphs/contributors) to SCC Post Meta’s development.
 
 == Installation ==
 
@@ -28,7 +23,7 @@ View all [contributors](https://github.com/sdavismedia/simple-course-creator-pos
 3. New settings are under 'Settings -> Course Settings -> Display (tab)'
 4. Customizer options under the 'Appearance -> Customizer' menu
 
-Follow Simple Course Creator Post Meta on [Github](https://github.com/sdavismedia/simple-course-creator-post-meta)
+Follow Simple Course Creator Post Meta on [Github](https://github.com/seanchdavis/simple-course-creator-post-meta)
 
 == Frequently Asked Questions ==
 
