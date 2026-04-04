@@ -31,58 +31,11 @@
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // No accessing this file directly
 
+// Retired: functionality is built into Simple Course Creator 2.0.0.
+if ( defined( 'SCC_VERSION' ) && version_compare( SCC_VERSION, '2.0.0', '>=' ) ) {
+	return;
+}
+
 
 /**
  * primary class for Simple Course Creator Post Meta
- *
- * @since 1.0.0
- */
-class Simple_Course_Creator_Post_Meta {
-
-
-	/**
-	 * constructor for Simple_Course_Creator_Post_Meta class
-	 *
-	 * Set up the basic plugin environment and with definitions,
-	 * plugin information, and required plugin files.
-	 */
-	public function __construct() {
-
-		// define plugin name
-		define( 'SCCPM_NAME', 'Simple Course Creator Post Meta' );
-
-		// define plugin version
-		define( 'SCCPM_VERSION', '1.0.8' );
-
-		// define plugin directory
-		define( 'SCCPM_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
-
-		// define plugin root file
-		define( 'SCCPM_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
-
-		// load text domain
-		add_action( 'init', array( $this, 'load_textdomain' ) );
-
-		// require additional plugin files
-		$this->includes();
-	}
-
-
-	/**
-	 * load SCC Post Meta textdomain
-	 */
-	public function load_textdomain() {
-		load_plugin_textdomain( 'scc_post_meta', false, SCCPM_DIR . 'languages/' );
-	}
-
-
-	/**
-	 * require additional plugin files
-	 */
-	private function includes() {
-		require_once( SCCPM_DIR . 'includes/display/class-scc-post-meta-hook.php' ); // hooks output class
-		require_once( SCCPM_DIR . 'includes/admin/class-scc-post-meta-customizer.php' ); // customizer class
-		require_once( SCCPM_DIR . 'includes/admin/class-scc-post-meta-settings.php' ); // settings class
-	}
-}
-new Simple_Course_Creator_Post_Meta();
